@@ -50,7 +50,7 @@ print(add_numbers(1, 2, 3))
 # <br>
 # `add_numbers` updated to take an optional flag parameter.
 
-# In[ ]:
+# In[5]:
 
 def add_numbers(x, y, z=None, flag=False):
     if (flag):
@@ -66,7 +66,7 @@ print(add_numbers(1, 2, flag=True))
 # <br>
 # Assign function `add_numbers` to variable `a`.
 
-# In[5]:
+# In[6]:
 
 def add_numbers(x,y):
     return x+y
@@ -81,27 +81,27 @@ a(1,2)
 # <br>
 # Use `type` to return the object's type.
 
-# In[6]:
+# In[7]:
 
 type('This is a string')
 
 
-# In[7]:
+# In[8]:
 
 type(None)
 
 
-# In[8]:
+# In[9]:
 
 type(1)
 
 
-# In[9]:
+# In[10]:
 
 type(1.0)
 
 
-# In[10]:
+# In[11]:
 
 type(add_numbers)
 
@@ -109,7 +109,7 @@ type(add_numbers)
 # <br>
 # Tuples are an immutable data structure (cannot be altered).
 
-# In[11]:
+# In[12]:
 
 x = (1, 'a', 2, 'b')
 type(x)
@@ -118,7 +118,7 @@ type(x)
 # <br>
 # Lists are a mutable data structure.
 
-# In[12]:
+# In[13]:
 
 x = [1, 'a', 2, 'b']
 type(x)
@@ -127,7 +127,7 @@ type(x)
 # <br>
 # Use `append` to append an object to a list.
 
-# In[13]:
+# In[14]:
 
 x.append(3.3)
 print(x)
@@ -136,7 +136,7 @@ print(x)
 # <br>
 # This is an example of how to loop through each item in the list.
 
-# In[14]:
+# In[15]:
 
 for item in x:
     print(item)
@@ -145,7 +145,7 @@ for item in x:
 # <br>
 # Or using the indexing operator:
 
-# In[15]:
+# In[16]:
 
 i=0
 while( i != len(x) ):
@@ -156,7 +156,7 @@ while( i != len(x) ):
 # <br>
 # Use `+` to concatenate lists.
 
-# In[16]:
+# In[17]:
 
 [1,2] + [3,4]
 
@@ -164,7 +164,7 @@ while( i != len(x) ):
 # <br>
 # Use `*` to repeat lists.
 
-# In[17]:
+# In[18]:
 
 [1]*3
 
@@ -172,7 +172,7 @@ while( i != len(x) ):
 # <br>
 # Use the `in` operator to check if something is inside a list.
 
-# In[18]:
+# In[19]:
 
 1 in [1, 2, 3]
 
@@ -180,7 +180,7 @@ while( i != len(x) ):
 # <br>
 # Now let's look at strings. Use bracket notation to slice a string.
 
-# In[19]:
+# In[20]:
 
 x = 'This is a string'
 print(x[0]) #first character
@@ -191,7 +191,7 @@ print(x[0:2]) #first two characters
 # <br>
 # This will return the last element of the string.
 
-# In[20]:
+# In[21]:
 
 x[-1]
 
@@ -199,7 +199,7 @@ x[-1]
 # <br>
 # This will return the slice starting from the 4th element from the end and stopping before the 2nd element from the end.
 
-# In[21]:
+# In[22]:
 
 x[-4:-2]
 
@@ -207,7 +207,7 @@ x[-4:-2]
 # <br>
 # This is a slice from the beginning of the string and stopping before the 3rd element.
 
-# In[22]:
+# In[23]:
 
 x[:3]
 
@@ -215,12 +215,12 @@ x[:3]
 # <br>
 # And this is a slice starting from the 3rd element of the string and going all the way to the end.
 
-# In[23]:
+# In[24]:
 
 x[3:]
 
 
-# In[24]:
+# In[25]:
 
 firstname = 'Christopher'
 lastname = 'Brooks'
@@ -233,7 +233,7 @@ print('Chris' in firstname)
 # <br>
 # `split` returns a list of all the words in a string, or a list split on a specific character.
 
-# In[25]:
+# In[26]:
 
 firstname = 'Christopher Arthur Hansen Brooks'.split(' ')[0] # [0] selects the first element of the list
 lastname = 'Christopher Arthur Hansen Brooks'.split(' ')[-1] # [-1] selects the last element of the list
@@ -244,12 +244,12 @@ print(lastname)
 # <br>
 # Make sure you convert objects to strings before concatenating.
 
-# In[26]:
+# In[27]:
 
 'Chris' + 2
 
 
-# In[27]:
+# In[28]:
 
 'Chris' + str(2)
 
@@ -257,7 +257,7 @@ print(lastname)
 # <br>
 # Dictionaries associate keys with values.
 
-# In[28]:
+# In[29]:
 
 x = {'Christopher Brooks': 'brooksch@umich.edu', 'Bill Gates': 'billg@microsoft.com'}
 x['Christopher Brooks'] # Retrieve a value by using the indexing operator
@@ -300,7 +300,7 @@ for name, email in x.items():
 # <br>
 # You can unpack a sequence into different variables:
 
-# In[ ]:
+# In[34]:
 
 x = ('Christopher', 'Brooks', 'brooksch@umich.edu')
 fname, lname, email = x
@@ -319,7 +319,7 @@ lname
 # <br>
 # Make sure the number of values you are unpacking matches the number of variables being assigned.
 
-# In[ ]:
+# In[37]:
 
 x = ('Christopher', 'Brooks', 'brooksch@umich.edu', 'Ann Arbor')
 fname, lname, email = x
@@ -328,12 +328,12 @@ fname, lname, email = x
 # <br>
 # # The Python Programming Language: More on Strings
 
-# In[ ]:
+# In[38]:
 
 print('Chris' + 2)
 
 
-# In[ ]:
+# In[39]:
 
 print('Chris' + str(2))
 
@@ -341,7 +341,7 @@ print('Chris' + str(2))
 # <br>
 # Python has a built in method for convenient string formatting.
 
-# In[37]:
+# In[40]:
 
 sales_record = {
 'price': 3.24,
@@ -375,7 +375,7 @@ print(sales_statement.format(sales_record['person'],
 # * trans : type of transmission
 # * year : model year
 
-# In[38]:
+# In[41]:
 
 import csv
 
@@ -390,7 +390,7 @@ mpg[:3] # The first three dictionaries in our list.
 # <br>
 # `csv.Dictreader` has read in each row of our csv file as a dictionary. `len` shows that our list is comprised of 234 dictionaries.
 
-# In[39]:
+# In[42]:
 
 len(mpg)
 
@@ -398,7 +398,7 @@ len(mpg)
 # <br>
 # `keys` gives us the column names of our csv.
 
-# In[40]:
+# In[43]:
 
 mpg[0].keys()
 
@@ -406,7 +406,7 @@ mpg[0].keys()
 # <br>
 # This is how to find the average cty fuel economy across all cars. All values in the dictionaries are strings, so we need to convert to float.
 
-# In[41]:
+# In[44]:
 
 sum(float(d['cty']) for d in mpg) / len(mpg)
 
@@ -414,7 +414,7 @@ sum(float(d['cty']) for d in mpg) / len(mpg)
 # <br>
 # Similarly this is how to find the average hwy fuel economy across all cars.
 
-# In[ ]:
+# In[45]:
 
 sum(float(d['hwy']) for d in mpg) / len(mpg)
 
@@ -422,7 +422,7 @@ sum(float(d['hwy']) for d in mpg) / len(mpg)
 # <br>
 # Use `set` to return the unique values for the number of cylinders the cars in our dataset have.
 
-# In[42]:
+# In[46]:
 
 cylinders = set(d['cyl'] for d in mpg)
 cylinders
@@ -431,7 +431,7 @@ cylinders
 # <br>
 # Here's a more complex example where we are grouping the cars by number of cylinder, and finding the average cty mpg for each group.
 
-# In[43]:
+# In[47]:
 
 CtyMpgByCyl = []
 
@@ -451,7 +451,7 @@ CtyMpgByCyl
 # <br>
 # Use `set` to return the unique values for the class types in our dataset.
 
-# In[44]:
+# In[48]:
 
 vehicleclass = set(d['class'] for d in mpg) # what are the class types
 vehicleclass
@@ -460,7 +460,7 @@ vehicleclass
 # <br>
 # And here's an example of how to find the average hwy mpg for each class of vehicle in our dataset.
 
-# In[45]:
+# In[49]:
 
 HwyMpgByClass = []
 
@@ -480,7 +480,7 @@ HwyMpgByClass
 # <br>
 # # The Python Programming Language: Dates and Times
 
-# In[48]:
+# In[50]:
 
 import datetime as dt
 import time as tm
@@ -489,7 +489,7 @@ import time as tm
 # <br>
 # `time` returns the current time in seconds since the Epoch. (January 1st, 1970)
 
-# In[49]:
+# In[51]:
 
 tm.time()
 
@@ -497,7 +497,7 @@ tm.time()
 # <br>
 # Convert the timestamp to datetime.
 
-# In[50]:
+# In[52]:
 
 dtnow = dt.datetime.fromtimestamp(tm.time())
 dtnow
@@ -506,7 +506,7 @@ dtnow
 # <br>
 # Handy datetime attributes:
 
-# In[51]:
+# In[53]:
 
 dtnow.year, dtnow.month, dtnow.day, dtnow.hour, dtnow.minute, dtnow.second # get year, month, day, etc.from a datetime
 
@@ -514,7 +514,7 @@ dtnow.year, dtnow.month, dtnow.day, dtnow.hour, dtnow.minute, dtnow.second # get
 # <br>
 # `timedelta` is a duration expressing the difference between two dates.
 
-# In[52]:
+# In[54]:
 
 delta = dt.timedelta(days = 100) # create a timedelta of 100 days
 delta
@@ -523,17 +523,17 @@ delta
 # <br>
 # `date.today` returns the current local date.
 
-# In[54]:
+# In[55]:
 
 today = dt.date.today()
 
 
-# In[55]:
+# In[56]:
 
 today - delta # the date 100 days ago
 
 
-# In[56]:
+# In[57]:
 
 today > today-delta # compare dates
 
@@ -544,7 +544,7 @@ today > today-delta # compare dates
 # <br>
 # An example of a class in python:
 
-# In[57]:
+# In[58]:
 
 class Person:
     department = 'School of Information' #a class variable
@@ -555,7 +555,7 @@ class Person:
         self.location = new_location
 
 
-# In[58]:
+# In[59]:
 
 person = Person()
 person.set_name('Christopher Brooks')
@@ -566,7 +566,7 @@ print('{} live in {} and works in the department {}'.format(person.name, person.
 # <br>
 # Here's an example of mapping the `min` function between two lists.
 
-# In[59]:
+# In[60]:
 
 store1 = [10.00, 11.00, 12.34, 2.34]
 store2 = [9.00, 11.10, 12.34, 2.01]
@@ -577,7 +577,7 @@ cheapest
 # <br>
 # Now let's iterate through the map object to see the values.
 
-# In[60]:
+# In[61]:
 
 for item in cheapest:
     print(item)
@@ -589,12 +589,12 @@ for item in cheapest:
 # <br>
 # Here's an example of lambda that takes in three parameters and adds the first two.
 
-# In[61]:
+# In[62]:
 
 my_function = lambda a, b, c : a + b
 
 
-# In[62]:
+# In[63]:
 
 my_function(1, 2, 3)
 
@@ -602,7 +602,7 @@ my_function(1, 2, 3)
 # <br>
 # Let's iterate from 0 to 999 and return the even numbers.
 
-# In[63]:
+# In[64]:
 
 my_list = []
 for number in range(0, 1000):
@@ -614,7 +614,7 @@ my_list
 # <br>
 # Now the same thing but with list comprehension.
 
-# In[ ]:
+# In[65]:
 
 my_list = [number for number in range(0,1000) if number % 2 == 0]
 my_list
@@ -623,7 +623,7 @@ my_list
 # <br>
 # # The Python Programming Language: Numerical Python (NumPy)
 
-# In[64]:
+# In[66]:
 
 import numpy as np
 
@@ -633,7 +633,7 @@ import numpy as np
 
 # Create a list and convert it to a numpy array
 
-# In[65]:
+# In[67]:
 
 mylist = [1, 2, 3]
 x = np.array(mylist)
@@ -643,7 +643,7 @@ x
 # <br>
 # Or just pass in a list directly
 
-# In[66]:
+# In[68]:
 
 y = np.array([4, 5, 6])
 y
@@ -652,7 +652,7 @@ y
 # <br>
 # Pass in a list of lists to create a multidimensional array.
 
-# In[67]:
+# In[69]:
 
 m = np.array([[7, 8, 9], [10, 11, 12]])
 m
@@ -661,7 +661,7 @@ m
 # <br>
 # Use the shape method to find the dimensions of the array. (rows, columns)
 
-# In[68]:
+# In[70]:
 
 m.shape
 
@@ -669,7 +669,7 @@ m.shape
 # <br>
 # `arange` returns evenly spaced values within a given interval.
 
-# In[69]:
+# In[71]:
 
 n = np.arange(0, 30, 2) # start at 0 count up by 2, stop before 30
 n
@@ -678,7 +678,7 @@ n
 # <br>
 # `reshape` returns an array with the same data with a new shape.
 
-# In[70]:
+# In[72]:
 
 n = n.reshape(3, 5) # reshape array to be 3x5
 n
@@ -687,7 +687,7 @@ n
 # <br>
 # `linspace` returns evenly spaced numbers over a specified interval.
 
-# In[71]:
+# In[73]:
 
 o = np.linspace(0, 4, 9) # return 9 evenly spaced values from 0 to 4
 o
@@ -696,7 +696,7 @@ o
 # <br>
 # `resize` changes the shape and size of array in-place.
 
-# In[72]:
+# In[74]:
 
 o.resize(3, 3)
 o
@@ -705,7 +705,7 @@ o
 # <br>
 # `ones` returns a new array of given shape and type, filled with ones.
 
-# In[73]:
+# In[75]:
 
 np.ones((3, 2))
 
@@ -713,7 +713,7 @@ np.ones((3, 2))
 # <br>
 # `zeros` returns a new array of given shape and type, filled with zeros.
 
-# In[74]:
+# In[76]:
 
 np.zeros((2, 3))
 
@@ -721,7 +721,7 @@ np.zeros((2, 3))
 # <br>
 # `eye` returns a 2-D array with ones on the diagonal and zeros elsewhere.
 
-# In[75]:
+# In[77]:
 
 np.eye(3)
 
@@ -729,7 +729,7 @@ np.eye(3)
 # <br>
 # `diag` extracts a diagonal or constructs a diagonal array.
 
-# In[76]:
+# In[78]:
 
 np.diag(y)
 
@@ -737,7 +737,7 @@ np.diag(y)
 # <br>
 # Create an array using repeating list (or see `np.tile`)
 
-# In[77]:
+# In[79]:
 
 np.array([1, 2, 3] * 3)
 
@@ -745,7 +745,7 @@ np.array([1, 2, 3] * 3)
 # <br>
 # Repeat elements of an array using `repeat`.
 
-# In[78]:
+# In[80]:
 
 np.repeat([1, 2, 3], 3)
 
@@ -753,7 +753,7 @@ np.repeat([1, 2, 3], 3)
 # <br>
 # #### Combining Arrays
 
-# In[79]:
+# In[81]:
 
 p = np.ones([2, 3], int)
 p
@@ -762,7 +762,7 @@ p
 # <br>
 # Use `vstack` to stack arrays in sequence vertically (row wise).
 
-# In[80]:
+# In[82]:
 
 np.vstack([p, 2*p])
 
@@ -770,7 +770,7 @@ np.vstack([p, 2*p])
 # <br>
 # Use `hstack` to stack arrays in sequence horizontally (column wise).
 
-# In[81]:
+# In[83]:
 
 np.hstack([p, 2*p])
 
@@ -780,19 +780,19 @@ np.hstack([p, 2*p])
 
 # Use `+`, `-`, `*`, `/` and `**` to perform element wise addition, subtraction, multiplication, division and power.
 
-# In[82]:
+# In[84]:
 
 print(x + y) # elementwise addition     [1 2 3] + [4 5 6] = [5  7  9]
 print(x - y) # elementwise subtraction  [1 2 3] - [4 5 6] = [-3 -3 -3]
 
 
-# In[83]:
+# In[85]:
 
 print(x * y) # elementwise multiplication  [1 2 3] * [4 5 6] = [4  10  18]
 print(x / y) # elementwise divison         [1 2 3] / [4 5 6] = [0.25  0.4  0.5]
 
 
-# In[84]:
+# In[86]:
 
 print(x**2) # elementwise power  [1 2 3] ^2 =  [1 4 9]
 
@@ -805,7 +805,7 @@ print(x**2) # elementwise power  [1 2 3] ^2 =  [1 4 9]
 # \begin{bmatrix}y_1 \\ y_2 \\ y_3\end{bmatrix}
 # = x_1 y_1 + x_2 y_2 + x_3 y_3$
 
-# In[85]:
+# In[87]:
 
 x.dot(y) # dot product  1*4 + 2*5 + 3*6
 
@@ -1005,7 +1005,7 @@ r[-1, ::2]
 # <br>
 # We can also perform conditional indexing. Here we are selecting values from the array that are greater than 30. (Also see `np.where`)
 
-# In[ ]:
+# In[113]:
 
 r[r > 30]
 
@@ -1013,7 +1013,7 @@ r[r > 30]
 # <br>
 # Here we are assigning all values in the array that are greater than 30 to the value of 30.
 
-# In[113]:
+# In[114]:
 
 r[r > 30] = 30
 r
@@ -1027,7 +1027,7 @@ r
 # 
 # `r2` is a slice of `r`
 
-# In[114]:
+# In[115]:
 
 r2 = r[:3,:3]
 r2
@@ -1036,7 +1036,7 @@ r2
 # <br>
 # Set this slice's values to zero ([:] selects the entire array)
 
-# In[115]:
+# In[116]:
 
 r2[:] = 0
 r2
@@ -1045,7 +1045,7 @@ r2
 # <br>
 # `r` has also been changed!
 
-# In[116]:
+# In[117]:
 
 r
 
@@ -1053,7 +1053,7 @@ r
 # <br>
 # To avoid this, use `r.copy` to create a copy that will not affect the original array
 
-# In[117]:
+# In[118]:
 
 r_copy = r.copy()
 r_copy
@@ -1062,7 +1062,7 @@ r_copy
 # <br>
 # Now when r_copy is modified, r will not be changed.
 
-# In[118]:
+# In[119]:
 
 r_copy[:] = 10
 print(r_copy, '\n')
@@ -1074,7 +1074,7 @@ print(r)
 
 # Let's create a new 4 by 3 array of random numbers 0-9.
 
-# In[119]:
+# In[120]:
 
 test = np.random.randint(0, 10, (4,3))
 test
@@ -1083,7 +1083,7 @@ test
 # <br>
 # Iterate by row:
 
-# In[120]:
+# In[121]:
 
 for row in test:
     print(row)
@@ -1092,7 +1092,7 @@ for row in test:
 # <br>
 # Iterate by index:
 
-# In[121]:
+# In[122]:
 
 for i in range(len(test)):
     print(test[i])
@@ -1101,7 +1101,7 @@ for i in range(len(test)):
 # <br>
 # Iterate by row and index:
 
-# In[122]:
+# In[123]:
 
 for i, row in enumerate(test):
     print('row', i, 'is', row)
@@ -1110,14 +1110,19 @@ for i, row in enumerate(test):
 # <br>
 # Use `zip` to iterate over multiple iterables.
 
-# In[ ]:
+# In[124]:
 
 test2 = test**2
 test2
 
 
-# In[ ]:
+# In[125]:
 
 for i, j in zip(test, test2):
     print(i,'+',j,'=',i+j)
+
+
+# In[ ]:
+
+
 

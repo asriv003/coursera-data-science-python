@@ -10,7 +10,7 @@
 # # Merging Dataframes
 # 
 
-# In[2]:
+# In[1]:
 
 import pandas as pd
 
@@ -121,7 +121,7 @@ df = pd.read_csv('census.csv')
 df.head()
 
 
-# In[16]:
+# In[15]:
 
 (df.where(df['SUMLEV']==50)
     .dropna()
@@ -129,7 +129,7 @@ df.head()
     .rename(columns={'ESTIMATESBASE2010': 'Estimates Base 2010'}))
 
 
-# In[ ]:
+# In[16]:
 
 df = df[df['SUMLEV']==50]
 df.set_index(['STNAME','CTYNAME'], inplace=True)
@@ -154,7 +154,7 @@ def min_max(row):
 df.apply(min_max, axis=1)
 
 
-# In[8]:
+# In[18]:
 
 import numpy as np
 def min_max(row):
@@ -170,7 +170,7 @@ def min_max(row):
 df.apply(min_max, axis=1).head()
 
 
-# In[ ]:
+# In[19]:
 
 rows = ['POPESTIMATE2010',
         'POPESTIMATE2011',
@@ -183,7 +183,7 @@ df.apply(lambda x: np.max(x[rows]), axis=1)
 
 # # Group by
 
-# In[9]:
+# In[20]:
 
 import pandas as pd
 import numpy as np
@@ -202,7 +202,7 @@ get_ipython().run_cell_magic('timeit', '-n 10', "for state in df['STNAME'].uniqu
 get_ipython().run_cell_magic('timeit', '-n 10', "for group, frame in df.groupby('STNAME'):\n    avg = np.average(frame['CENSUS2010POP'])\n    print('Counties in state ' + group + ' have an average population of ' + str(avg))")
 
 
-# In[26]:
+# In[22]:
 
 df.head()
 
@@ -233,25 +233,25 @@ df = df[df['SUMLEV']==50]
 df.groupby('STNAME').agg({'CENSUS2010POP': np.average})
 
 
-# In[27]:
+# In[26]:
 
 print(type(df.groupby(level=0)['POPESTIMATE2010','POPESTIMATE2011']))
 print(type(df.groupby(level=0)['POPESTIMATE2010']))
 
 
-# In[28]:
+# In[27]:
 
 (df.set_index('STNAME').groupby(level=0)['CENSUS2010POP']
     .agg({'avg': np.average, 'sum': np.sum}))
 
 
-# In[29]:
+# In[28]:
 
 (df.set_index('STNAME').groupby(level=0)['POPESTIMATE2010','POPESTIMATE2011']
     .agg({'avg': np.average, 'sum': np.sum}))
 
 
-# In[ ]:
+# In[29]:
 
 (df.set_index('STNAME').groupby(level=0)['POPESTIMATE2010','POPESTIMATE2011']
     .agg({'POPESTIMATE2010': np.average, 'POPESTIMATE2011': np.sum}))
@@ -259,7 +259,7 @@ print(type(df.groupby(level=0)['POPESTIMATE2010']))
 
 # # Scales
 
-# In[3]:
+# In[30]:
 
 df = pd.DataFrame(['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D'],
                   index=['excellent', 'excellent', 'excellent', 'good', 'good', 'good', 'ok', 'ok', 'ok', 'poor', 'poor'])
@@ -267,12 +267,12 @@ df.rename(columns={0: 'Grades'}, inplace=True)
 df
 
 
-# In[4]:
+# In[31]:
 
 df['Grades'].astype('category').head()
 
 
-# In[5]:
+# In[32]:
 
 grades = df['Grades'].astype('category',
                              categories=['D', 'D+', 'C-', 'C', 'C+', 'B-', 'B', 'B+', 'A-', 'A', 'A+'],
@@ -280,12 +280,12 @@ grades = df['Grades'].astype('category',
 grades.head()
 
 
-# In[6]:
+# In[33]:
 
 grades > 'C'
 
 
-# In[10]:
+# In[34]:
 
 df = pd.read_csv('census.csv')
 df = df[df['SUMLEV']==50]
@@ -295,30 +295,30 @@ pd.cut(df['avg'],10)
 
 # # Pivot Tables
 
-# In[11]:
+# In[35]:
 
 #http://open.canada.ca/data/en/dataset/98f1a129-f628-4ce4-b24d-6f16bf24dd64
 df = pd.read_csv('cars.csv')
 
 
-# In[12]:
+# In[36]:
 
 df.head()
 
 
-# In[13]:
+# In[37]:
 
 df.pivot_table(values='(kW)', index='YEAR', columns='Make', aggfunc=np.mean)
 
 
-# In[14]:
+# In[38]:
 
 df.pivot_table(values='(kW)', index='YEAR', columns='Make', aggfunc=[np.mean,np.min], margins=True)
 
 
 # # Date Functionality in Pandas
 
-# In[15]:
+# In[39]:
 
 import pandas as pd
 import numpy as np
@@ -326,122 +326,122 @@ import numpy as np
 
 # ### Timestamp
 
-# In[16]:
+# In[40]:
 
 pd.Timestamp('9/1/2016 10:05AM')
 
 
 # ### Period
 
-# In[17]:
+# In[41]:
 
 pd.Period('1/2016')
 
 
-# In[18]:
+# In[42]:
 
 pd.Period('3/5/2016')
 
 
 # ### DatetimeIndex
 
-# In[19]:
+# In[43]:
 
 t1 = pd.Series(list('abc'), [pd.Timestamp('2016-09-01'), pd.Timestamp('2016-09-02'), pd.Timestamp('2016-09-03')])
 t1
 
 
-# In[20]:
+# In[44]:
 
 type(t1.index)
 
 
 # ### PeriodIndex
 
-# In[21]:
+# In[45]:
 
 t2 = pd.Series(list('def'), [pd.Period('2016-09'), pd.Period('2016-10'), pd.Period('2016-11')])
 t2
 
 
-# In[22]:
+# In[46]:
 
 type(t2.index)
 
 
 # ### Converting to Datetime
 
-# In[23]:
+# In[47]:
 
 d1 = ['2 June 2013', 'Aug 29, 2014', '2015-06-26', '7/12/16']
 ts3 = pd.DataFrame(np.random.randint(10, 100, (4,2)), index=d1, columns=list('ab'))
 ts3
 
 
-# In[25]:
+# In[48]:
 
 ts3.index = pd.to_datetime(ts3.index)
 ts3
 
 
-# In[26]:
+# In[49]:
 
 pd.to_datetime('4.7.12', dayfirst=True)
 
 
 # ### Timedeltas
 
-# In[27]:
+# In[50]:
 
 pd.Timestamp('9/3/2016')-pd.Timestamp('9/1/2016')
 
 
-# In[28]:
+# In[51]:
 
 pd.Timestamp('9/2/2016 8:10AM') + pd.Timedelta('12D 3H')
 
 
 # ### Working with Dates in a Dataframe
 
-# In[29]:
+# In[52]:
 
 dates = pd.date_range('10-01-2016', periods=9, freq='2W-SUN')
 dates
 
 
-# In[30]:
+# In[53]:
 
 df = pd.DataFrame({'Count 1': 100 + np.random.randint(-5, 10, 9).cumsum(),
                   'Count 2': 120 + np.random.randint(-5, 10, 9)}, index=dates)
 df
 
 
-# In[31]:
+# In[54]:
 
 df.index.weekday_name
 
 
-# In[32]:
+# In[55]:
 
 df.diff()
 
 
-# In[33]:
+# In[56]:
 
 df.resample('M').mean()
 
 
-# In[34]:
+# In[57]:
 
 df['2017']
 
 
-# In[35]:
+# In[58]:
 
 df['2016-12']
 
 
-# In[36]:
+# In[59]:
 
 df['2016-12':]
 
